@@ -1,0 +1,53 @@
+CREATE DATABASE databasename;
+
+#### Relationship  ##############
+CREATE TABLE orders (
+   orderid INT PRIMARY KEY AUTO_INCREMENT,
+    ordernumber INT NOT NULL,
+    personid INT NOT NULL,
+    FOREIGN KEY (personid) REFERENCES persons(PersonID)
+);
+
+##### UNIQUE or No duplicate #######
+ALTER TABLE persons
+ADD UNIQUE(email_address);
+
+
+CREATE TABLE Persons1 (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    City varchar(255) DEFAULT 'Dhaka'
+);
+
+CREATE INDEX fnameindex
+ON persons(FirstName)
+
+SELECT * FROM employees
+
+SELECT `employeeNumber`, `lastName`, `firstName`, `email` FROM `employees`
+
+SELECT `employeeNumber`, `lastName`, `firstName`, `email`, jobTitle FROM `employees` WHERE employeeNumber=1056; 
+
+SELECT `employeeNumber`, `lastName`, `firstName`, `email`, jobTitle FROM `employees` WHERE lastName='Patterson'; 
+
+SELECT `employeeNumber`, `lastName`, `firstName`, `email`, jobTitle FROM `employees` WHERE jobTitle='Sales Rep'; 
+
+SELECT DISTINCT officeCode FROM `employees`; 
+SELECT * FROM `employees` WHERE officeCode='1'
+
+SELECT * FROM `employees` WHERE officeCode='1' OR officeCode='2'; 
+
+SELECT * FROM `employees` WHERE officeCode BETWEEN 1 AND 3;
+
+SELECT * FROM `employees` ORDER BY employeeNumber desc; 
+
+SELECT * FROM `employees` ORDER BY lastName, firstName; 
+
+UPDATE employees SET lastName='Ahmed', firstName='Masum', email='masum@gmail.com' WHERE employeeNumber=1002
+
+
+
+
+

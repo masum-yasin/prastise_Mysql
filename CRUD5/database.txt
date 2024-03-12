@@ -1,0 +1,10 @@
+db:idb_bisew_wdpf55
+table:students
+id
+name
+gender
+dob
+email
+batch
+address
+hobbies
